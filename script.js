@@ -19,14 +19,14 @@ function calculateProfitAndLoss(intialPrice, currentPrice, StockQuantity) {
     let profitPercentage = (profit / cost) * 100;
     outputBox.innerText = `Your Profit is Rs. ${
       profit * StockQty
-    } and profit Percentage is ${profitPercentage.toFixed(2)} %`;
+    } and Profit Percentage is ${profitPercentage.toFixed(2)} %`;
   } else if (cost > selling) {
     //loss
     let loss = cost - selling;
     let lossPercentage = (loss / cost) * 100;
-    outputBox.innerText = `Your loss is Rs. ${
+    outputBox.innerText = `Your Loss is Rs. ${
       loss * StockQty
-    }  and loss Percentage is ${lossPercentage.toFixed(2)}% `;
+    }  and Loss Percentage is ${lossPercentage.toFixed(2)}% `;
   } else {
     outputBox.innerText = "no pain no gain, no gain no pain";
   }
