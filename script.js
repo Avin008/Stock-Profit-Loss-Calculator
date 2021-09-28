@@ -35,13 +35,14 @@ function calculateProfitAndLoss(intialPrice, currentPrice, StockQuantity) {
 function checkInput(inputOne, inputTwo, inputThree) {
   if (inputOne.value && inputTwo.value && inputThree.value) {
     if (
-      (Number(inputOne.value) &&
-        Number(inputTwo.value) &&
-        Number(inputThree.value)) == 0
+      Number(inputOne.value) > 0 &&
+      Number(inputTwo.value) > 0 &&
+      Number(inputThree.value) > 0
     ) {
-      outputBox.innerText = "values cannot be zero";
-    } else {
+      //calculate
       calculateProfitAndLoss(intialPrice, currentPrice, StockQuantity);
+    } else {
+      outputBox.innerText = "Input Value cannot be less than 1";
     }
   } else {
     outputBox.innerText = "input fields cannot be empty";
