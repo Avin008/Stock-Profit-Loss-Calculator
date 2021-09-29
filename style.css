@@ -45,3 +45,8 @@ input {
 h1 {
   color: #3d63eb;
 }
+
+#github {
+  text-align: center;
+  font-size: 2rem;
+}
