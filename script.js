@@ -4,11 +4,11 @@ const StockQuantity = document.querySelector("#stock-quantity");
 const outputBox = document.querySelector("#output-box");
 const checkBtn = document.querySelector("#check-btn");
 
-checkBtn.addEventListener("click", function () {
-  checkInput(intialPrice, currentPrice, StockQuantity);
-});
+checkBtn.addEventListener("click", () =>
+  checkInput(intialPrice, currentPrice, StockQuantity)
+);
 
-function calculateProfitAndLoss(intialPrice, currentPrice, StockQuantity) {
+const calculateProfitAndLoss = (intialPrice, currentPrice, StockQuantity) => {
   let cost = Number(intialPrice.value);
   let selling = Number(currentPrice.value);
   let StockQty = Number(StockQuantity.value);
@@ -30,9 +30,9 @@ function calculateProfitAndLoss(intialPrice, currentPrice, StockQuantity) {
   } else {
     outputBox.innerText = "no pain no gain, no gain no pain";
   }
-}
+};
 
-function checkInput(inputOne, inputTwo, inputThree) {
+const checkInput = (inputOne, inputTwo, inputThree) => {
   if (inputOne.value && inputTwo.value && inputThree.value) {
     if (
       Number(inputOne.value) > 0 &&
@@ -47,4 +47,4 @@ function checkInput(inputOne, inputTwo, inputThree) {
   } else {
     outputBox.innerText = "input fields cannot be empty";
   }
-}
+};
